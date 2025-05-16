@@ -52,17 +52,29 @@ A server-side application built with **Node.js**, **TypeScript**, **Express**, a
 ## Project Structure
 
 ```
-src
-├── models/
-│   └── Crypto.ts
-├── routes/
-│   └── deviation.ts
-│   └── index.ts
-│   └── stats.ts
-├── utils/
-│   └── CoinGeckoClient.ts
-├── db.ts
-└── index.ts
+crypto-stats/
+├── api-server/
+│   ├── src/
+│   │   ├── models/Crypto.ts
+│   │   ├── routes/deviation.ts
+│   │   ├── routes/index.ts
+│   │   ├── routes/stats.ts
+│   │   ├── utils/CoinGeckoClient.ts
+│   │   ├── db.ts
+│   │   └── index.ts
+│   ├── package.json
+│   ├── tsconfig.json
+│   ├── .env
+│   └── README.md
+├── worker-server/
+│   ├── src/
+│   │   ├── services/cryptoService.ts
+│   │   └── index.ts
+│   ├── package.json
+│   ├── tsconfig.json
+│   ├── .env
+│   └── README.md
+├── .gitignore
 ```
 
 ## Dependencies
