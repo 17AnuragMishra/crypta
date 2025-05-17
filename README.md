@@ -1,15 +1,10 @@
 # KoinX Backend Project
 
-A server-side application built with **Node.js**, **TypeScript**, **Express**, and **MongoDB** to fetch, store, and analyze cryptocurrency statistics. This project includes background jobs for periodic updates and RESTful APIs for retrieving data.
-
-**Live Link:** https://crypta-be.vercel.app/
+A server-side application built with **Node.js**, **TypeScript**, **Express**, **Docker** and **MongoDB** to fetch, store, and analyze cryptocurrency statistics. This project includes background jobs for periodic updates and RESTful APIs for retrieving data.
 
 ## Features
 
-- Fetches and stores the latest cryptocurrency stats (price, market cap, 24-hour change) for Bitcoin, Ethereum, and Matic every 2 hours in the background.
-- Provides an API to retrieve the latest stats for a specified cryptocurrency ("/api/v1/stat?coin=bitcoin").
-- Calculates the standard deviation of the price of a cryptocurrency from the last 100 records ("/api/v1/deviation?coin=bitcoin").
-- Built using best practices for production-grade development.
+-- This is the worker server for the cryptocurrency stats application, built with TypeScript. It runs a background job every 15 minutes to publish an event to NATS, triggering the API server to update crypto stats.
 
 ## Getting Started
 
@@ -17,6 +12,7 @@ A server-side application built with **Node.js**, **TypeScript**, **Express**, a
 
 - [Node.js](https://nodejs.org/) (v18+ recommended)
 - [MongoDB](https://www.mongodb.com/) (Local or MongoDB Atlas)
+- [Docker](https://www.docker.com/get-started/) (Local)
 - Package Manager (e.g., npm or yarn)
 
 ### Installation
@@ -24,7 +20,7 @@ A server-side application built with **Node.js**, **TypeScript**, **Express**, a
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Lokendrakushwah12/crypta.git
+   git clone https://github.com/username/crypta.git
    cd crypta
    ```
 
@@ -85,6 +81,7 @@ crypto-stats/
 - **mongoose**
 - **node-cron**
 - **node-schedule**
+and few more.
 
 ## Contact
 
